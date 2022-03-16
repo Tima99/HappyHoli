@@ -58,7 +58,7 @@ main{
 }
 
 .text{
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
     color: rgb(255, 255, 48);
     animation: wobble 1s linear 0s infinite alternate ;
@@ -67,10 +67,12 @@ main{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     z-index: 999;
     position: relative;
+    text-shadow: 0 0 .1rem rgba(244, 0, 0, 1)
 }
 .touch-text{
     font-size: 2.25rem;
     color: yellow;
+    text-shadow: 0 0 .1rem rgba(244, 0, 0, 1)
 }
 
 @keyframes wobble{
@@ -80,7 +82,7 @@ main{
         -moz-transform: rotate(15deg);
         -ms-transform: rotate(15deg);
         -o-transform: rotate(15deg);
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     to{
         transform: rotate(-15deg);
@@ -88,7 +90,7 @@ main{
         -moz-transform: rotate(-15deg);
         -ms-transform: rotate(-15deg);
         -o-transform: rotate(-15deg);
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 }
 @keyframes wobble-x{
@@ -124,10 +126,10 @@ main{
     color: yellow;
     text-shadow: .1rem .1rem .1rem black;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 .merry{
-    font-size: 5rem !important; 
+    font-size: 5.5rem !important; 
     color: rgb(250, 34, 34);
 }
 
@@ -155,18 +157,22 @@ main{
     -moz-border-radius: .5rem;
     -ms-border-radius: .5rem;
     -o-border-radius: .5rem;
-    border: .2rem solid royalblue;
+    border: .2rem solid rgb(197, 197, 13);
     margin: 0 .5rem;
-    background-color: rgb(212, 212, 13);
+    background-color: rgb(224, 224, 43);
     font-size: 1.2rem;
     padding: .5rem;
     font-weight: bold;
     letter-spacing: 1px;
+    outline: none;
+}
+#nameInput:focus{
+    box-shadow: 0 0 .75rem .15rem rgb(197, 197, 13);
 }
 
 .button{
     padding: .7rem 1rem;
-    background-color: royalblue;
+    background-color: rgb(92, 129, 241);
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
@@ -176,7 +182,7 @@ main{
     font-size: 1.2rem;
     font-weight: bold;
     display: flex;
-    border: .2rem solid blue;
+    border: .2rem solid royalblue;
     outline: none;
     cursor: pointer;
 }
