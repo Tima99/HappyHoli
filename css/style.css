@@ -228,3 +228,16 @@ main{
         font-size: 2rem !important;
     }
 }
+
+.gif{
+    animation: OpacityDown 1s 1s 1 alternate ease;
+    -webkit-animation: OpacityDown 1s 1s 1 alternate ease;
+}
+@keyframes OpacityDown{
+    from {
+        opacity : 1;
+    }
+    to{
+        opacity : .2;
+    }
+}

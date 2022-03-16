@@ -41,6 +41,15 @@ function touch(ele){
     music.song1.play();    
 
     ele.style.display = 'none'
-    document.querySelector('.second-slide').style.display ='flex'
+
+    const middle = document.querySelector('.middle-slide')
+    middle.style.display ='flex'
+    setTimeout(MiddleHide, 1500)
+    setTimeout(()=>{
+        document.querySelector(".second-slide").style.display = "flex"
+    }, 1000)
+    function MiddleHide(){
+        middle.style.display = "none"
+    }
     document.querySelector('.inputs-box').style.display ='flex'
 }
