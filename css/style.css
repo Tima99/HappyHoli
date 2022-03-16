@@ -1,0 +1,224 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+main{
+    max-width: 600px;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+.bg-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-container img{
+    width: inherit;
+    height: inherit;
+    filter: blur(.6px);
+    -webkit-filter: blur(.6px);
+    opacity: .9;
+}
+
+.tree-container{
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.tree-box{
+    height: 65vh;
+    margin-bottom: 4vh;
+    overflow: hidden;
+}
+.tree-green{
+    width: 100%;    
+    height: 100%;
+    z-index: 999;
+}
+
+.content{
+    max-width: 600px;
+    position: absolute;
+    top: 0;
+}
+.text-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 2rem;
+}
+
+.text{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 48);
+    animation: wobble 1s linear 0s infinite alternate ;
+    -webkit-animation: wobble 1s linear 0s infinite alternate ;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 999;
+    position: relative;
+}
+.touch-text{
+    font-size: 2.25rem;
+    color: yellow;
+}
+
+@keyframes wobble{
+    from{
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+        font-size: 1.8rem;
+    }
+    to{
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+        font-size: 2.2rem;
+    }
+}
+@keyframes wobble-x{
+    from{
+        transform: translateX(.6rem);
+        -webkit-transform: translateX(.6rem);
+        -moz-transform: translateX(.6rem);
+        -ms-transform: translateX(.6rem);
+        -o-transform: translateX(.6rem);
+}
+    to{
+        transform: translateX(-.6rem);
+        -webkit-transform: translateX(-.6rem);
+        -moz-transform: translateX(-.6rem);
+        -ms-transform: translateX(-.6rem);
+        -o-transform: translateX(-.6rem);
+}
+}
+.congrates-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+.name{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.7rem 0;
+    animation: wobble 1s infinite alternate ease;
+    -webkit-animation: wobble 1s infinite alternate ease;
+    height: fit-content;
+    text-align: center;
+    color: yellow;
+    text-shadow: .1rem .1rem .1rem black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.merry{
+    font-size: 5rem !important; 
+    color: rgb(250, 34, 34);
+}
+
+.inputs{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: .6rem;
+    position: fixed;
+    /* background-color: rebeccapurple; */
+    /* display: none; */
+}
+.inputs-box{
+    display: flex;
+}
+#nameInput{
+    width: 94%;
+    z-index: 999;
+    line-height: 2rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border: .2rem solid royalblue;
+    margin: 0 .5rem;
+    background-color: rgb(212, 212, 13);
+    font-size: 1.2rem;
+    padding: .5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button{
+    padding: .7rem 1rem;
+    background-color: royalblue;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    margin: 0 1rem 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    border: .2rem solid blue;
+    outline: none;
+    cursor: pointer;
+}
+
+#whatsappBtn{
+    width: 90%;
+    height: 10vh;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: rgb(17,158,6);
+    animation: wobble-x 1s infinite alternate;
+    -webkit-animation: wobble-x 1s infinite alternate;
+    margin-bottom: 1.2rem;
+    border: .1rem solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: none;
+    max-width: 540px;
+}
+#whatsappBtn button{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 600px) {
+    .merry{
+        font-size: 3rem !important;
+    }
+
+}
+
+@media screen and (max-width : 330px) {
+    .merry{
+        font-size: 2rem !important;
+    }
+}
